@@ -19,13 +19,9 @@ const EmailForm = () => {
 
     return (
         <div>
-            <div className="hero">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-3xl font-bold">Contact with me!</h1>
-                        <p className="py-6">Please send your message</p>
-                    </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="w-full">
+                <div className=" w-full md:w-2/3 mx-auto ">
+                    <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
                         <form ref={form} onSubmit={sendEmail} className="card-body">
                             <div className="form-control">
                                 <label className="label">
