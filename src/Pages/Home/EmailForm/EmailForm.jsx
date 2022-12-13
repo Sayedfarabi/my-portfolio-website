@@ -11,9 +11,10 @@ const EmailForm = () => {
         emailjs.sendForm('service_5ka9bv9', 'template_p9ob0jo', form.current, 'OnmnH2zSMoC9UfBmX')
             .then((result) => {
                 e.target.reset()
-                console.log(result.text);
+                alert("Your message Already sent")
             }, (error) => {
                 console.log(error.text);
+                alert("Can't send your message .. Please Try Again...")
             });
     }
 
