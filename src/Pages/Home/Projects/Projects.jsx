@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard/ProjectCard';
+import { useQuery } from '@tanstack/react-query';
 import furnitureBeaImage from '../../../Assets/project-image/furniturebea.jpg';
 import easyYogaImage from '../../../Assets/project-image/easy-yoga.jpg';
 import dailyNewsOnlineImage from '../../../Assets/project-image/news-today-online.jpg';
@@ -187,12 +188,33 @@ const Projects = () => {
         },
     ]
 
+    const { data: myProjects = [], isLoading, refetch } = useQuery({
+        queryKey: ["/myProjects"],
+        queryFn: async () => {
+            try {
+                const res = await fetch("http://localhost:5000/myProjects")
+                const data = res.json()
+                return data;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    })
+
+    console.log(myProjects);
+
+    if (isLoading) {
+        return <div className='text-center text-xl text-blue-600'>
+            <h5>Loading...</h5>
+        </div>
+    }
+
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {
-                projects.map(project => {
+                myProjects.map(project => {
                     return <ProjectCard
-                        key={project?.id}
+                        key={project?._id}
                         project={project}
                     >
                     </ProjectCard>
