@@ -11,7 +11,7 @@ const AddService = () => {
     const addServiceHandle = data => {
         // console.log(data);
         if (data) {
-            fetch("http://localhost:5000/addService", {
+            fetch("https://my-portfolio-server-side.vercel.app/addService", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

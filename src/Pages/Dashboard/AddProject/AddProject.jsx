@@ -14,7 +14,7 @@ const AddProject = () => {
         queryKey: ["/myServices"],
         queryFn: async () => {
             try {
-                const res = await fetch("http://localhost:5000/myServices")
+                const res = await fetch("https://my-portfolio-server-side.vercel.app/myServices")
                 const data = res.json()
                 return data;
             } catch (error) {
@@ -51,7 +51,7 @@ const AddProject = () => {
                     data.serviceId = service._id
                     // console.log(data);
                     if (data) {
-                        fetch("http://localhost:5000/addProject", {
+                        fetch("https://my-portfolio-server-side.vercel.app/addProject", {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json"

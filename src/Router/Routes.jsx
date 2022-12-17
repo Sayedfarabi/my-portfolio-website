@@ -32,7 +32,7 @@ export const routes = createBrowserRouter([
             {
                 path: "/projectDetails/:id",
                 element: <ProjectDetails></ProjectDetails>,
-                loader: async ({ params }) => await fetch(`http://localhost:5000/projectDetails/${params.id}`)
+                loader: async ({ params }) => await fetch(`https://my-portfolio-server-side.vercel.app/projectDetails/${params.id}`)
             },
             {
                 path: "/blog",

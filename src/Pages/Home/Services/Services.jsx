@@ -7,7 +7,7 @@ const Services = () => {
         queryKey: ["/myServices"],
         queryFn: async () => {
             try {
-                const res = await fetch("http://localhost:5000/myServices")
+                const res = await fetch("https://my-portfolio-server-side.vercel.app/myServices")
                 const data = res.json()
                 return data;
             } catch (error) {
