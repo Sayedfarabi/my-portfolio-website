@@ -10,7 +10,7 @@ const Educations = () => {
             image: "https://tgco.edu.bd/wp-content/uploads/2022/11/college.jpg",
             institute: "Tongi Govt College",
             university: "National University",
-            program: "Preliminary to Master’s   ",
+            program: "Priliminary to Master’s   ",
             academicYear: "(2019-2020)",
             subject: "Management",
             courseDuration: "02 Years",
