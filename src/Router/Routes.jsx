@@ -8,6 +8,7 @@ import Hobbies from "../Pages/AboutUs/AboutUs/Hobbies/Hobbies";
 import Blog from "../Pages/Blog/Blog/Blog";
 import AddProject from "../Pages/Dashboard/AddProject/AddProject";
 import AddService from "../Pages/Dashboard/AddService/AddService";
+import EmailForm from "../Pages/Home/EmailForm/EmailForm";
 import Home from "../Pages/Home/Home";
 import Project from "../Pages/Project/Project/Project";
 import ProjectDetails from "../Pages/Project/ProjectDetails/ProjectDetails";
@@ -41,6 +42,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/contactMe",
+                element: <EmailForm></EmailForm>
             },
             {
                 path: "/aboutUs",

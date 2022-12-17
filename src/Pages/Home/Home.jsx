@@ -31,10 +31,6 @@ const Home = () => {
                     <h3 className='text-3xl font-bold text-secondary my-12 text-center'>|| PROJECTS ||</h3>
                     <Projects></Projects>
                 </div>
-                <div className='py-12'>
-                    <h3 className='text-3xl font-bold text-secondary my-12 text-center'>|| CONTACT ME ||</h3>
-                    <EmailForm></EmailForm>
-                </div>
 
             </div>
         </div>

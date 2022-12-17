@@ -29,7 +29,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="" className="btn btn-sm btn-primary">{"Hire Me >>"}</Link>
+                    <Link to="/contactMe" className="btn btn-sm btn-primary">{"Contact Me>>"}</Link>
                 </div>
             </div>
         </section>
