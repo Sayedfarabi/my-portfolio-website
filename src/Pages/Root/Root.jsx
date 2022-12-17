@@ -8,7 +8,7 @@ const Root = () => {
     return (
         <>
             <Navbar></Navbar>
-            <div style={{ minHeight: "90vh" }}>
+            <div style={{ minHeight: "25vh" }}>
                 <Outlet></Outlet>
             </div>
             <div>

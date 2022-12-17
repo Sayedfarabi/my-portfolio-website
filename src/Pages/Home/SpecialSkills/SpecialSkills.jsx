@@ -27,12 +27,12 @@ const SpecialSkills = () => {
     return (
         <div>
             <div className=' md:flex justify-center items-center'>
-                <div className='w-full sm:my-6'>
+                <div className='w-full sm:py-6 bg-orange-200'>
                     <h2 className='text-3xl px-6'>
                         My Special skills field here.
                     </h2>
                 </div>
-                <div className='w-full'>
+                <div className='w-full px-4'>
                     {
                         specialSkills.map(skill => {
                             return <SpecialSkillCard

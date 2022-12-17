@@ -22,7 +22,7 @@ const EmailForm = () => {
         <div>
             <div className="w-full">
                 <div className=" w-full md:w-2/3 mx-auto ">
-                    <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full shadow-2xl bg-rose-200">
                         <form ref={form} onSubmit={sendEmail} className="card-body">
                             <div className="form-control">
                                 <label className="label">

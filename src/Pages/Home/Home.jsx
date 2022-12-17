@@ -11,7 +11,7 @@ import Technologies from './Technologies/Technologies';
 const Home = () => {
     return (
         <div>
-            <div className='px-5'>
+            <div>
                 <Banner></Banner>
                 <div className='text-center py-12'>
                     <h3 className='text-3xl font-bold text-secondary my-12 '>

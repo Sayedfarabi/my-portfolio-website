@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceCard = ({ image, title }) => {
     return (
-        <div className='w-44 h-60 border-2 rounded-md mx-auto'>
+        <div className='w-44 h-60 border-2 rounded-md mx-auto bg-purple-100'>
             <div>
                 <img src={image} className='w-3/4 h-24 my-5 rounded-md mx-auto' alt="Landing page Icon" />
             </div>

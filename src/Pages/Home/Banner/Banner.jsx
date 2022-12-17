@@ -5,7 +5,7 @@ import resume from '../../../Assets/Resume.png';
 const Banner = () => {
     return (
         <div>
-            <div className='grid md:grid-cols-2'>
+            <div className='grid md:grid-cols-2 bg-sky-100'>
                 <div className='text-center flex justify-center items-center'>
                     <img src={sayedImg} alt="SayedImg" className='sm:w-4/5 md:w-4/5' />
                 </div>

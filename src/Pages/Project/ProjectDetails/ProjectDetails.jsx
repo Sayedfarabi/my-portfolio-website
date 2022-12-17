@@ -6,10 +6,10 @@ const ProjectDetails = () => {
     const data = useLoaderData();
     console.log(data);
     return (
-        <div>
+        <div className='bg-violet-200'>
             {/* <UpdatingSite></UpdatingSite> */}
             <div>
-                <h3 className='text-4xl text-secondary font-bold text-center my-12'>Project Details</h3>
+                <h3 className='text-4xl text-secondary font-bold text-center py-12'>Project Details</h3>
             </div>
             <div className='md:flex'>
                 <div className='sm:w-2/3 md:w-1/2'>

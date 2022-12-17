@@ -3,7 +3,7 @@ import ServiceCard from './ServiceCard/ServiceCard';
 import { useQuery } from '@tanstack/react-query';
 
 const Services = () => {
-    const { data: services = [], isLoading, refetch } = useQuery({
+    const { data: services = [], isLoading } = useQuery({
         queryKey: ["/myServices"],
         queryFn: async () => {
             try {

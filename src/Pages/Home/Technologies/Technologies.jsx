@@ -132,7 +132,7 @@ const Technologies = () => {
     return (
         <div>
             <div className='py-8'>
-                <h5 className='py-8 text-3xl text-info'>Front-End Technology and Skills</h5>
+                <h5 className='my-8 text-3xl py-2 px-4 bg-violet-300'>Front-End Technology and Skills</h5>
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 
                     {
@@ -149,7 +149,7 @@ const Technologies = () => {
                 </div>
             </div>
             <div className='py-8'>
-                <h5 className='py-8 text-3xl text-info text-right'>Back-End Technology and Skills</h5>
+                <h5 className='my-8 text-3xl px-4 py-2 text-right bg-violet-300'>Back-End Technology and Skills</h5>
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 
                     {
@@ -166,7 +166,7 @@ const Technologies = () => {
                 </div>
             </div>
             <div className='py-8'>
-                <h5 className='py-8 text-3xl text-info'>Comfortable Tools</h5>
+                <h5 className='my-8 text-3xl px-4  py-2 bg-violet-300'>Comfortable Tools</h5>
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 
                     {
