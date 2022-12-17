@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import ContactMe from "../Component/Utilities/ContactMe/ContactMe";
 import ErrorPage from "../Component/Utilities/ErrorPage/ErrorPage";
 import About from "../Pages/AboutUs/AboutUs/About/About";
 import AboutUs from "../Pages/AboutUs/AboutUs/AboutUs";
@@ -37,10 +36,6 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
-            },
-            {
-                path: "/contactMe",
-                element: <ContactMe></ContactMe>
             },
             {
                 path: "/aboutUs",

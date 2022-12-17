@@ -2,6 +2,8 @@ import { RouterProvider } from 'react-router-dom';
 import { routes } from './Router/Routes';
 import { Toaster } from 'react-hot-toast';
 
+
+
 function App() {
   return (
     <div className='max-w-[1440px] mx-auto'>

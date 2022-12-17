@@ -4,22 +4,22 @@ import SpecialSkillCard from './SpecialSkillCard/SpecialSkillCard';
 const SpecialSkills = () => {
     const specialSkills = [
         {
-            id: "01",
+            id: "001",
             title: "Communication",
             value: 90
         },
         {
-            id: "02",
+            id: "002",
             title: "Leadership",
             value: 85
         },
         {
-            id: "03",
+            id: "003",
             title: "Teamwork",
             value: 80
         },
         {
-            id: "04",
+            id: "004",
             title: "Flexibility",
             value: 75
         }

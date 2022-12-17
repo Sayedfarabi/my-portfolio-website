@@ -18,7 +18,7 @@ const Projects = () => {
         }
     })
 
-    console.log(myProjects);
+    // console.log(myProjects);
 
     if (isLoading) {
         return <div className='text-center text-xl text-blue-600'>

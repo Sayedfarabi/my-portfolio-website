@@ -8,4 +8,6 @@ Usage Package :
 • DaisyUi
 • React Hook Form
 • EmailJS
+• React-Hot-Toast
+• React-Toaster
 # my-portfolio-website
