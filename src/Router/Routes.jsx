@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
+import AdminRoute from "../Component/Utilities/AdminRoute/AdminRoute";
 import ErrorPage from "../Component/Utilities/ErrorPage/ErrorPage";
+import PrivateRoute from "../Component/Utilities/PrivateRoute/PrivateRoute";
 import About from "../Pages/AboutUs/AboutUs/About/About";
 import AboutUs from "../Pages/AboutUs/AboutUs/AboutUs";
 import Educations from "../Pages/AboutUs/AboutUs/Educations/Educations";
@@ -62,15 +64,16 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DashboardRoot></DashboardRoot>,
+        errorElement: <ErrorPage></ErrorPage>,
+        element: <PrivateRoute><AdminRoute><DashboardRoot></DashboardRoot></AdminRoute></PrivateRoute>,
         children: [
             {
                 path: "/dashboard/addService",
-                element: <AddService></AddService>
+                element: <PrivateRoute><AdminRoute><AddService></AddService></AdminRoute></PrivateRoute>
             },
             {
                 path: "/dashboard/addProject",
-                element: <AddProject></AddProject>
+                element: <PrivateRoute><AdminRoute><AddProject></AddProject></AdminRoute></PrivateRoute>
             },
         ]
 

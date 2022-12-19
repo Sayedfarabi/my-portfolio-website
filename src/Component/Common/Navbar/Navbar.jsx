@@ -3,12 +3,39 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Navbar = () => {
-    const { signInWithGoogle, logOut, user, loading } = useContext(AuthContext);
-    console.log(user);
+    const { signInWithGoogle, logOut, user } = useContext(AuthContext);
+    // console.log(user);
 
-    // const loginHandle = ()=>{
+    const loginHandle = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result?.user;
+                console.log(user);
+                const userData = {
+                    name: user.displayName,
+                    email: user.email,
+                    photoURL: user.photoURL,
+                    emailVerified: user.emailVerified,
+                    userRole: "user"
+                }
+                // console.log(userData);
+                fetch("https://my-portfolio-server-side.vercel.app/addUser", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(userData)
+                })
+                    .then(res => res.json())
+                    .then(result => {
+                        console.log(result);
+                    })
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
-    // }
+    }
 
     return (
         <section>
@@ -23,7 +50,10 @@ const Navbar = () => {
 
                             <li><Link to="/blog" className='text-secondary'>Blog</Link></li>
                             <li><Link to="/aboutUs" className='text-secondary'>About us</Link></li>
-                            <li><Link to="/dashboard" className='text-secondary'>Dashboard</Link></li>
+                            {
+                                user?.uid &&
+                                <li><Link to="/dashboard" className='text-secondary'>Dashboard</Link></li>
+                            }
                         </ul>
                     </div>
                     <Link to="/" className="btn btn-ghost normal-case text-xl"><span className='text-primary'>Abu</span><span className='text-secondary'>Sayed</span></Link>
@@ -33,13 +63,16 @@ const Navbar = () => {
                         <li><Link to="/home" className='text-secondary'>Home</Link></li>
                         <li><Link to="/blog" className='text-secondary'>Blog</Link></li>
                         <li><Link to="/aboutUs" className='text-secondary'>About us</Link></li>
-                        <li><Link to="/dashboard" className='text-secondary'>Dashboard</Link></li>
+                        {
+                            user?.uid &&
+                            <li><Link to="/dashboard" className='text-secondary'>Dashboard</Link></li>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
                     {
                         !user?.uid &&
-                        <button onClick={signInWithGoogle} className='btn btn-sm btn-primary mr-2'>Log in</button>
+                        <button onClick={loginHandle} className='btn btn-sm btn-primary mr-2'>Log in</button>
                     }
 
                     {
