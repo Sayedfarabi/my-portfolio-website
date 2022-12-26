@@ -1,6 +1,6 @@
 import React from 'react';
 import sayedImg from '../../../Assets/sayed.png';
-import resume from '../../../Assets/Resume.png';
+import resume from '../../../Assets/Resume.pdf';
 
 const Banner = () => {
     return (
